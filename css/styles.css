@@ -8,3 +8,75 @@ body{
     padding: 0;
     margin: 0;
 }
+#digital-clock {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#analogue-clock-container{
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#analogue-clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #802287;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#analogue-clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 16px;
+    text-align: center;
+}
+
+#analogue-clock span i {
+    transform: rotate(calc(-30deg * var(--j)));
+    display: inline-block;
+    font-size: 20px;
+    font-style: normal;
+    inset: 16px;
+    text-align: center;
+}
+
+#analogue-clock::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+#analogue-clock .hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#analogue-clock .hand i {
+    position: absolute;
+    background-color: var(--color);
+    width: var(--width);
+    height: var(--height);
+    border-radius: 8px;
+}

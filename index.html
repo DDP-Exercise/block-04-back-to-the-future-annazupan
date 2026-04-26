@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <title>Back to the Future</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script type="module" src="./js/controller.js"></script>
 </head>
 <body>
+
+<div id="digital-clock"></div>
+
+<button id="save-btn" style="position: absolute; top: 80px; right: 40px; padding: 10px 20px; cursor: pointer;">Save Time</button>
+
+<div id="analogue-clock-container">
+    <div id="analogue-clock">
+        <div id="hours-container" class="hand" style="--color: #ff3d58; --height: 70px; --width: 6px"><i></i></div>
+        <div id="minutes-container" class="hand" style="--color: #00a6ff; --height: 90px; --width: 4px"><i></i></div>
+        <div id="seconds-container" class="hand" style="--color: #ffffff; --height: 110px; --width: 2px"><i></i></div>
+        <span style ="--i: 1; --j: 0"><i>|</i></span>
+        <span style ="--i: 2; --j: 0"><i>|</i></span>
+        <span style ="--i: 3; --j: 3"><i>3</i></span>
+        <span style ="--i: 4; --j: 0"><i>|</i></span>
+        <span style ="--i: 5; --j: 0"><i>|</i></span>
+        <span style ="--i: 6; --j: 6"><i>6</i></span>
+        <span style ="--i: 7; --j: 0"><i>|</i></span>
+        <span style ="--i: 8; --j: 0"><i>|</i></span>
+        <span style ="--i: 9; --j: 9"><i>9</i></span>
+        <span style ="--i: 10; --j: 0"><i>|</i></span>
+        <span style ="--i: 11; --j: 0"><i>|</i></span>
+        <span style ="--i: 12; --j: 12"><i>12</i></span>
+    </div>
+</div>
 
 </body>
 </html>
