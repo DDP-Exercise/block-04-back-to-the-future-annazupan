@@ -1,5 +1,18 @@
-body{
-    background-image: url('../img/BTTFII.webp');
+:root {
+    --hours-color: #ff3d58;
+    --minutes-color: #00a6ff;
+    --seconds-color: #ffffff;
+    --hours-height: 70px;
+    --minutes-height: 90px;
+    --seconds-height: 110px;
+    --hours-width: 6px;
+    --minutes-width: 4px;
+    --seconds-width: 2px;
+}
+
+body {
+    background-color: black;
+    background-image: url('../img/cat_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -7,4 +20,117 @@ body{
     height: 100vh;
     padding: 0;
     margin: 0;
+}
+
+#digital-clock {
+    color: rgba(234, 110, 209, 0.9);
+    font-size: 100px;
+    position: absolute;
+    top: 160px;
+    right: 80px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#analogue-clock-container {
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#analogue-clock {
+    position: relative;
+    top: 20px;
+    left: 80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(197, 21, 161, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#analogue-clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 16px;
+    text-align: center;
+}
+
+#analogue-clock span i {
+    transform: rotate(calc(-30deg * var(--j)));
+    display: inline-block;
+    font-size: 20px;
+    font-style: normal;
+    inset: 16px;
+    text-align: center;
+}
+
+#analogue-clock::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+#analogue-clock .hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#analogue-clock .hand i {
+    position: absolute;
+    background-color: var(--color);
+    width: var(--width);
+    height: var(--height);
+    border-radius: 8px;
+}
+
+#hours-container {
+    --color: var(--hours-color);
+    --height: var(--hours-height);
+    --width: var(--hours-width);
+}
+
+#minutes-container {
+    --color: var(--minutes-color);
+    --height: var(--minutes-height);
+    --width: var(--minutes-width);
+}
+
+#seconds-container {
+    --color: var(--seconds-color);
+    --height: var(--seconds-height);
+    --width: var(--seconds-width);
+}
+
+#save-btn {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgba(234, 110, 209, 0.9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+
+}
+
+#save-btn:hover {
+    background-color: rgb(197, 21, 161);
 }
